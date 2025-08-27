@@ -1,4 +1,4 @@
-from servece import add_todo, view_tasks, delete_task
+from vazifa import add_todo, view_tasks, delete_task
 
 
 while True:
