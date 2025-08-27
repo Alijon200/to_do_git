@@ -18,6 +18,9 @@ def add_todo():
 
         if task.lower() == "stop":
             break
+        if task == " ":
+            print("Vazifa bosh bolishi mumkin emas!")
+            continue
 
         if task:
             with open("malumot.txt", "a") as file:
@@ -46,7 +49,9 @@ def view_tasks():
 def delete_task():
     view_tasks()
     task_id = input("Qaysi vazifani o‘chirmoqchisiz (raqam kiriting): ")
-
+    if not task_id.isdigit():
+        print("Iltimos faqat raqam kiritng!")
+        return
     try:
         with open("malumot.txt", "r") as file:
             lines = file.readlines()
