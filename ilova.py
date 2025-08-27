@@ -1,4 +1,4 @@
-from servece import add_todo, view_tasks
+from servece import add_todo, view_tasks, delete_task
 
 
 while True:
@@ -9,3 +9,11 @@ while True:
     elif tanlov == 2:
         view_tasks()
 
+    elif tanlov == 3:
+        delete_task()
+
+    elif tanlov == 0:
+        print("Dastur tugadi!")
+        break
+    else:
+        print("Siz xato tanlov kiritdingiz!")
